@@ -1,0 +1,142 @@
+---
+title: "states data"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+ 
+```{r warning=FALSE, message=FALSE} 
+load(file="states_data.RData")
+```
+
+```{r}
+library(tidyverse) 
+states_data
+```
+Dataset consists of observations on 50 States plus District of Columbia on the following measures:
+
+## columns in the dataset: 
+__`state`__: name of US State
+
+### vote totals presidential elections
+
+Source: MIT Election Data and Science Lab, "County Presidential Election Returns 2000-2020", <https://doi.org/10.7910/DVN/VOQCHQ>  
+
+__`trump_votes_2016`__: each the vote totals for each candidate or all others combined.  
+
+__`clinton_votes_2016`__:
+
+__`other_votes_2016`__  :  
+
+__`trump_votes_2020`__   :               
+
+__`biden_votes_2020`__   :               
+
+__`other_votes_2020`__ :
+
+### COVID cases and deaths
+
+Source: The New York Times. (2021). <https://github.com/nytimes/covid-19-data>
+
+__`cases_2020`__ : COVID total cases for 2020
+
+__`cases_jan_2020`__ to __`cases_oct_2021`__ : cumulative COVID case counts by month
+
+__`vax_dec_2020`__ to __`vax_oct_2021`__ : cumulative vaccination counts per month (all ages)
+
+__`deaths_jan_2020`__ to __`deaths_oct_2021`__: cumulative COVID attributed deaths by month  
+
+__`deaths_pc_jun_2020`__: per capita (10,000 people) COVID deaths by June 2020
+
+
+### COVID shutdown
+
+Source: Ballotopedia.org.
+<https://ballotpedia.org/States_that_issued_lockdown_and_stay-at-home_orders_in_response_to_the_coronavirus_(COVID-19)_pandemic,_2020>
+
+__`stay_begin`__: date of beginning stay at home order 
+
+__`stay_end`__: date of ending of stay at home order
+
+__`shutdown_date_range`__: date length of State stay at home order
+
+__`shutdown_length`__: length of State stay at home order in numeric number of days
+
+### demographics 
+
+US Census Bureau, <https://www.census.gov/data.html> And American Community Survey 5-year estimate 2018. 
+
+__`total_population_2010`__ : State population from 2010 decennial US Census, US Census Bureau
+
+__`total_population_est_2019`__  : estimated population in 2019, 1-year estimate, US Census Bureau.  
+
+__`census_fips_code`__: numeric code for State
+
+The following are American Community Survey 5-year estimates 2018. population totals and by first racial group mention, income, and educational attainment. And Gini coefficient.
+
+__`pop`__: total population
+
+__`white_pop`__:
+
+__`black_pop`__: 
+
+__`native_pop`__: 
+
+__`asian_pop`__: 
+
+__`latino_pop`__: 
+
+__`median_income`__: In US Dollars
+
+__`bachelors_pop`__: Total population 25 or older with a bachelor's degree
+
+__`gini`__:  Gini coefficient of wealth inequality, 2018 estimate
+
+### economics
+
+Source: Bureau of Economic Analysis. Annual GDP, personal income, and employment by State: <https://apps.bea.gov/itable/iTable.cfm?ReqID=70&step=1>.   
+
+__`q1_gdp_2020`__ :   percentage change in GDP from Q4 2019 to Q1 2020 
+
+__`q2_gdp_2020`__  :  percentage change in GDP from Q1 2020 to Q2 2020  
+
+__`q3_gdp_2020`__   : percentage change in GDP from Q2 2020 to Q3 2020   
+
+__`q4_gdp_2020`__    :  percentage change in GDP from Q3 2020 to Q4 2020 
+
+__`pc_income_2020`__ : State per capita income in 2020                    
+             
+__`oct_2020_unemployed`__ : proportion of population unemployed in October 2020               
+
+
+### public health
+
+__`drug_alc_deaths_2019`__ : number of deaths attributed to drug or alcohol overdose in 2019. Source: Centers for Disease Control and Prevention, National Center for Health Statistics.   <http://wonder.cdc.gov/ucd-icd10.html>  
+
+__`life_expec`__: life expectancy at birth in years, 2018 Source: KFF's State Health Facts.  Life Expectancy at Birth (in years). Kaiser Family Foundation. <https://www.kff.org/other/state-indicator/life-expectancy/>
+
+
+### policy liberalism and public opinion mass liberalism
+
+Source: Caughey, Devin; Warshaw, Christopher, 2017, "caughey_warshaw_summary.tab", Replication Data for: Policy Preferences and Policy Change: Dynamic Responsiveness in the American States, 1936–2014, <https://doi.org/10.7910/DVN/K3QWZW/5DVZFO>, Harvard Dataverse, V2, UNF:6:gclIUlb4vZOuKOkJEYoI9g== [fileUNF]  
+__`state_social_liberalism_policy`__: index of social policy liberalism 2014, higher scores more liberal
+
+__`state_econ_liberalism_policy`__:  index of economic policy liberalism 2014, higher scores more liberal     
+
+__`mass_social_liberalism_policy`__: index of mass social liberalism 2014, higher scores more liberal  
+
+__`mass_econ_liberalism_policy`__: index of mass economic liberalism 2014, higher scores more liberal    
+
+__`dempid_est`__: Estimated proportion of Democratic Party identifiers in the State voting age public, 2014.
+
+__`reppid_est`__: Estimated proportion of Republican Party identifiers in the State voting age public, 2014.
+
+### legislature characteristics
+
+__`percent_women_legislature`__: percent of women in the State legislature. Source: Center for American Women and Politics, Eagleton Institute of Politics, & Rutgers, The State University of New Jersey (Eds.). (2021, June 24). Women in State Legislatures 2021. Cawp. <https://cawp.rutgers.edu/women-state-legislature-2021>. 
+
+ 
